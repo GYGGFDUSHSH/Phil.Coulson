@@ -586,9 +586,9 @@ async def auto_filter(client, message):
             )
         imdb = await get_poster(search) if IMDB else None
         if imdb and imdb.get('poster'):
-            await message.reply_photo(photo=imdb.get('poster'), caption=f"<b>🏷 Title: {imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: {imdb.get('year')}\n🌟 Rating: {imdb.get('rating')} / 10</b>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo=imdb.get('poster'), caption=f"🏷 Title: {imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: {imdb.get('year')}\n🌟 Rating: {imdb.get('rating')} / 10\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         elif imdb:
-            await message.reply_text(f"<b>🏷 Title: {imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: {imdb.get('year')}\n🌟 Rating: {imdb.get('rating')} / 10</b>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_text(f"🏷 Title: {imdb.get('title')}</a>\n🎭 Genres: {imdb.get('genres')}\n📆 Year: {imdb.get('year')}\n🌟 Rating: {imdb.get('rating')} / 10\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         else:
             await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
         
