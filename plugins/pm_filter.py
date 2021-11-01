@@ -120,16 +120,16 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"📃 Pages {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
+            [InlineKeyboardButton("☜︎︎︎ 𝘽𝘼𝘾𝙆", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"📃 Pages {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"🗓 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append([InlineKeyboardButton(f"Pᴀɢᴇ {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🗓 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
-                InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("☜︎︎︎ 𝘽𝘼𝘾𝙆", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"Pᴀɢᴇ {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton("𝙉𝙀𝙓𝙏 ☞︎︎︎", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -578,11 +578,11 @@ async def auto_filter(client, message):
             BUTTONS[key] = search
             req = message.from_user.id if message.from_user else 0
             btn.append(
-                [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton(text=f"Pᴀɢᴇ 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
             )
         else:
             btn.append(
-                [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="Pᴀɢᴇ 1/1",callback_data="pages")]
             )
         imdb = await get_poster(search) if IMDB else None
         if imdb and imdb.get('poster'):
