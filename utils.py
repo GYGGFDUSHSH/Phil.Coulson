@@ -83,6 +83,8 @@ async def get_poster(query, bulk=False, id=False):
     rating = str(movie.get("rating"))
     votes = str(movie.get("votes"))
     lang = str(movie.get("lang"))
+    country = str(movie.get("country"))
+    runtime = str(movie.get("runtime"))
     if movie.get("original air date"):
         date = movie["original air date"]
     elif movie.get("year"):
@@ -104,6 +106,8 @@ async def get_poster(query, bulk=False, id=False):
         'votes': votes,
         'rating': rating,
         'lang, : lang,
+        'country': country,
+        'runtime': runtime,
         'url':f'https://www.imdb.com/title/tt{movieid}'
 
     }
