@@ -586,9 +586,9 @@ async def auto_filter(client, message):
             )
         imdb = await get_poster(search) if IMDB else None
         if imdb and imdb.get('poster'):
-            await message.reply_photo(photo=imdb.get('poster'), caption=f"🏷 Title: <code>{imdb.get('title')}</code></a>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')} / 10</code>\n🗳️ Votes</b>: {imdb.get('votes')}\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo=imdb.get('poster'), caption=f"🏷 Title: <code>{imdb.get('title')}</code></a>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')} / 10</code>\n🗳️ Votes</b>: {imdb.get('votes')}\n🌏 Country</b>: {imdb.get('country')}\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         elif imdb:
-            await message.reply_photo(photo="https://telegra.ph/file/f9f1b7440984664f37462.jpg", caption=f"🏷 Title: <code>{imdb.get('title')}</code>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')}</code> / 10\n🗳️ Votes</b>: {imdb.get('votes')}\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo="https://telegra.ph/file/f9f1b7440984664f37462.jpg", caption=f"🏷 Title: <code>{imdb.get('title')}</code>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')}</code> / 10\n🗳️ Votes</b>: {imdb.get('votes')}\n🌏 Country</b>: {imdb.get('country')}\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         else:
             await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
         
