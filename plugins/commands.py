@@ -10,6 +10,14 @@ from database.users_chats_db import db
 from info import CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, LOG_CHANNEL, PICS
 from utils import get_size, is_subscribed, temp
 
+PHOTO = [
+   "https://telegra.ph/file/b58a72fce3abf63922555.jpg",
+   "https://telegra.ph/file/0838071cf941cab166820.jpg",
+   "https://telegra.ph/file/4c2a3a814c1c911fe79ac.jpg",
+   "https://telegra.ph/file/06876faebb9379fbde973.jpg",
+   "https://telegra.ph/file/39091206210a11946606b.jpg",
+   "https://telegra.ph/file/f72de37894d302da50402.jpg",
+   ]
 logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.command("start"))
@@ -86,7 +94,7 @@ async def start(client, message):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
-            photo="https://telegra.ph/file/d32169a517600a90812a9.jpg",
+            photo=random.choice(PHOTO),
             caption=script.START_TXT.format(message.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
