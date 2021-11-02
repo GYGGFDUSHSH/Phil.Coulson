@@ -100,6 +100,7 @@ async def get_poster(query, bulk=False, id=False):
         'genres': genres,
         'poster': poster,
         'plot': plot,
+        'votes': votes,
         'rating': rating,
         'url':f'https://www.imdb.com/title/tt{movieid}'
 
