@@ -586,9 +586,9 @@ async def auto_filter(client, message):
             )
         imdb = await get_poster(search) if IMDB else None
         if imdb and imdb.get('poster'):
-            await message.reply_photo(photo=imdb.get('poster'), caption=f"<I>🏷 Title:</I> <code>{imdb.get('title')}</code></a>\n<I>🎭 Genres:</I> <code>{imdb.get('genres')}</code>\n<I>📆 Year:</I> <code>{imdb.get('year')}</code>\n<I>🌟 Rating:</I> <code>{imdb.get('rating')} / 10</code>\n<I>🖋 StoryLine:</I> <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo=imdb.get('poster'), caption=f"🏷 Title: <code>{imdb.get('title')}</code></a>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')} / 10</code>\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         elif imdb:
-            await message.reply_text(f"<I>🏷 Title:</I> <code>{imdb.get('title')}<\code>\n<I>🎭 Genres:</I> <code>{imdb.get('genres')}</code>\n<I>📆 Year:</I> <code>{imdb.get('year')}</code>\n<I>🌟 Rating:</I> <code>{imdb.get('rating')}</code> / 10\n<I>🖋 StoryLine:</I> <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_text(f"🏷 Title: <code>{imdb.get('title')}</code>\n🎭 Genres: <code>{imdb.get('genres')}</code>\n📆 Year: <code>{imdb.get('year')}</code>\n🌟 Rating: <code>{imdb.get('rating')}</code> / 10\n🖋 StoryLine: <code>{imdb.get('plot')}</code>", reply_markup=InlineKeyboardMarkup(btn))
         else:
             await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
         
