@@ -26,6 +26,7 @@ PICS = [
   "https://telegra.ph/file/c39c9017ce59d1d201b17.jpg",
   "https://telegra.ph/file/7dbb3f0cbd1491061b0a7.jpg",
   "https://telegra.ph/file/11d9370e562d72cbffc99.jpg",
+]
 
 # Admins, Channels & Users
 ADMINS = [1560645285]
