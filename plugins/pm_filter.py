@@ -383,6 +383,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "pages":
         await query.answer()
+    elif query.data == "spelling":
+        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
+
     elif query.data == "start":
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -563,10 +566,10 @@ Sorry  bro ,{search} No Movie/Series Related to the Given Word Was Found 🥺
           reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🕵️‍♂️ GOOGLE 🕵️‍♂️", url="https://www.google.com")
+                        InlineKeyboardButton("🕵️‍♂️ GOOGLE 🕵️‍♂️", url=f"https://google.com/search?q={search}")
                     ],
                     [       
-                        InlineKeyboardButton("Did not understand🥲", url="https://t.me/joinchat/6WZ0z0AQ0E8yMDdl")
+                        InlineKeyboardButton("Did not understand🥲", callback_data="spelling"),
                     ]
                 ]
             )
