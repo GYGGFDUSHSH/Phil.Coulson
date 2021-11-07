@@ -33,7 +33,7 @@ ADMINS = [1560645285]
 CHANNELS = [-1001500220248]
 AUTH_USERS = ADMINS
 AUTH_CHANNEL = None
-
+AUTH_GROUPS = -1001498025340
 # MongoDB information
 DATABASE_URI = "mongodb+srv://evamaria2:evamaria2@cluster0.tx3ho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 DATABASE_NAME = "Cluster0"
