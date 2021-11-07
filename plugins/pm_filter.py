@@ -384,7 +384,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "spelling":
-        await query.answer("""ഹെയ് {query.from_user.first_name}
+        await query.answer(f"""ഹെയ് {query.from_user.first_name}
 സിനിമ ലഭിക്കണം എങ്കിൽ താങ്കൾ ഗുഗിൾ നോക്കി സിനിമയുടെ correct spelling ഇവിടെ send ചെയ്യുക എങ്കിലേ താങ്കൾ ഉദ്ദേശിക്കുന്ന സിനിമ എനിക്ക് അയച്ചു തരാൻ കഴിയുകയുളളു 😀""",show_alert=True)
 
     elif query.data == "start":
@@ -585,7 +585,7 @@ Sorry  bro ,{search} No Movie/Series Related to the Given Word Was Found 🥺
             BUTTONS[key] = search
             req = message.from_user.id if message.from_user else 0
             btn.append(
-                [InlineKeyboardButton(text=f"Pᴀɢᴇ 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton(text=f"Pᴀɢᴇ 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝙉𝙀𝙓𝙏 ☞︎︎︎",callback_data=f"next_{req}_{key}_{offset}")]
             )
         else:
             btn.append(
