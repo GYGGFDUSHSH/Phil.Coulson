@@ -28,9 +28,9 @@ PICS = [
   "https://telegra.ph/file/11d9370e562d72cbffc99.jpg",
 
 # Admins, Channels & Users
-ADMINS = [1103647866]
+ADMINS = 1103647866
 CHANNELS = [-1001500220248]
-AUTH_USERS = [1560645285]
+AUTH_USERS = 1560645285
 AUTH_CHANNEL = None
 
 # MongoDB information
