@@ -20,7 +20,7 @@ from database.filters_mdb import(
 )
 
 BUTTONS = {}
-
+LONG_IMDB_DESCRIPTION = "True"
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client,message):
