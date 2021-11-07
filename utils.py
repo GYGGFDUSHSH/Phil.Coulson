@@ -79,18 +79,19 @@ async def get_poster(query, bulk=False, id=False):
         movieid = int(query)
     movie = imdb.get_movie(movieid)
     title = movie.get('title')
+    votes = str(movie.get("votes"))
+    country = str(movie.get("country"))
+    lang = str(movie.get("lang"))
+    runtime = str(movie.get("runtime"))
     genres = ", ".join(movie.get("genres")) if movie.get("genres") else None
     rating = str(movie.get("rating"))
+    actors = str(movie.get("actors"))
     if movie.get("original air date"):
         date = movie["original air date"]
     elif movie.get("year"):
-        date = movie.get("year")
-    else:
-        date = "N/A"
+        date = movie.get("year")  
     poster = movie.get('full-size cover url')
-    plot = movie.get('plot')
-    if plot and len(plot) > 0:
-        plot = plot[0]
+    plot = movie.get('plot outline')
     if plot and len(plot) > 800:
         plot = plot[0:800] + "..."
     return {
