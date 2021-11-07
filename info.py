@@ -6,9 +6,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = 3020564
-API_HASH = "91c026fadfdc442f504a0bd3e5c8cd18"
-BOT_TOKEN = "1651274124:AAGSuYUJTzvmuNA42U8qNfutJUtBjquWd4U"
+API_ID = 7475759
+API_HASH = "9a0128b1396fb0c1e0e2af0267a44a29"
+BOT_TOKEN = "2146623895:AAGV5zzGJe0BmPkMoW5zkn9Fpuxf2i-y8O8"
 
 # Bot settings
 CACHE_TIME = "300"
@@ -39,9 +39,9 @@ DATABASE_NAME = "Cluster0"
 COLLECTION_NAME = "Telegram_files"
 
 # Others
-LOG_CHANNEL = -1001716242007
-SUPPORT_CHAT = "MGMOVIEGRAM"
+LOG_CHANNEL = -1001565029969
+SUPPORT_CHAT = "PrimeFlix_Movies"
 P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
-SINGLE_BUTTON = bool((environ.get('SINGLE_BUTTON', False)))
+SINGLE_BUTTON = bool((environ.get('SINGLE_BUTTON', True)))
 CUSTOM_FILE_CAPTION = "`{file_name}`"
