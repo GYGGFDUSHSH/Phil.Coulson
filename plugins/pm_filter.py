@@ -567,10 +567,10 @@ Sorry  bro ,{search} No Movie/Series Related to the Given Word Was Found 🥺
           reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🕵️‍♂️ GOOGLE 🕵️‍♂️", url=f"https://google.com/search?q={search}")
+                        InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
                     ],
                     [       
-                        InlineKeyboardButton("Did not understand🥲", callback_data="spelling"),
+                        InlineKeyboardButton("🧐Did not understand🥲", callback_data="spelling"),
                     ]
                 ]
             )
