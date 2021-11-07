@@ -44,5 +44,4 @@ LOG_CHANNEL = -1001565029969
 SUPPORT_CHAT = "PrimeFlix_Movies"
 P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
-SINGLE_BUTTON = None
 CUSTOM_FILE_CAPTION = "`{file_name}`"
