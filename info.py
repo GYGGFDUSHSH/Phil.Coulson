@@ -14,18 +14,18 @@ BOT_TOKEN = "2146623895:AAGV5zzGJe0BmPkMoW5zkn9Fpuxf2i-y8O8"
 CACHE_TIME = "300"
 USE_CAPTION_FILTER = False        
 PICS = [
-  "https://telegra.ph/file/3002281196303098ed719.jpg",
-  "https://telegra.ph/file/ba325e42787cc6cfb8f9c.jpg",
-  "https://telegra.ph/file/d7483ff134a647606bdbd.jpg",
-  "https://telegra.ph/file/fd34364fd60b16dba86e5.jpg",
-  "https://telegra.ph/file/1eddd2e17d3c433329644.jpg",
-  "https://telegra.ph/file/4d710f5ede210a8d33a9b.jpg",
-  "https://telegra.ph/file/126c3d59725f22317b231.jpg",
-  "https://telegra.ph/file/223f3f92abb1fa6e95c7d.jpg",
-  "https://telegra.ph/file/18ada04c1a18f234fb946.jpg",
-  "https://telegra.ph/file/c39c9017ce59d1d201b17.jpg",
-  "https://telegra.ph/file/7dbb3f0cbd1491061b0a7.jpg",
-  "https://telegra.ph/file/11d9370e562d72cbffc99.jpg",
+  "https://telegra.ph/file/6c3e0994e3d8f0d6d5b8d.jpg",
+  "https://telegra.ph/file/112378346f55f1bf332b0.jpg",
+  "https://telegra.ph/file/d9dc44f2d938df975d4e6.jpg",
+  "https://telegra.ph/file/2dbb2278089fee7078c85.jpg",
+  "https://telegra.ph/file/0faa6ca4f27522c5104b2.jpg",
+  "https://telegra.ph/file/8cdf0c1c64b2807605435.jpg",
+  "https://telegra.ph/file/662f41ef8fa2d45114700.jpg",
+  "https://telegra.ph/file/61e5dd43220097e7bea57.jpg",
+  "https://telegra.ph/file/d75221819b317e4d06598.jpg",
+  "https://telegra.ph/file/a5f4eab0445da6d3d4720.jpg",
+  "https://telegra.ph/file/5a7ab02ce1f53ecc1098f.jpg",
+  "https://telegra.ph/file/31f833975728d83a66567.jpg",
 ]
 
 # Admins, Channels & Users
