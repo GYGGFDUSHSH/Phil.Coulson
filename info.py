@@ -32,7 +32,7 @@ PICS = [
 ADMINS = [1103647866]
 CHANNELS = [-1001485668506]
 AUTH_USERS = ADMINS
-AUTH_CHANNEL = None
+AUTH_CHANNEL = -1001254315842
 AUTH_GROUPS = -1001498025340
 # MongoDB information
 DATABASE_URI = "mongodb+srv://evamaria2:evamaria2@cluster0.tx3ho.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
