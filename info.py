@@ -44,5 +44,5 @@ LOG_CHANNEL = -1001500220248
 SUPPORT_CHAT = "PrimeFlix_Movies"
 P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
-SINGLE_BUTTON = True
+SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "True")))
 CUSTOM_FILE_CAPTION = "`{file_name}`"
