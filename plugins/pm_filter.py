@@ -68,8 +68,7 @@ async def give_filter(client,message):
                         await message.reply_cached_media(
                             fileid,
                             caption=reply_text or "",
-                            reply_markup=InlineKeyboardMarkup(filebuttons)
-                        )
+                            )
                 except Exception as e:
                     print(e)
                 break 
