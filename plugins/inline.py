@@ -88,16 +88,7 @@ async def answer(bot, query):
                            switch_pm_parameter="okay")
 
 
-def get_reply_markup(query):
-    buttons = [[
-        InlineKeyboardButton('🖥️ Movies 🖥️', url='t.me/PrimeFlixMovies'),
-        InlineKeyboardButton('⭐ Tv Series ⭐', url='t.me/TvseriesCollectionsPrimeflix')
-        ],[
-        InlineKeyboardButton('🖥️ Movies 🖥️', url='t.me/PrimeFlixMovies')
-        ],[
-        InlineKeyboardButton('🔍 Tv Series 🔎', url=',t.me/TvseriesCollectionsPrimeflix')
-        ]]
-    return InlineKeyboardMarkup(buttons)
+
 
 
 
