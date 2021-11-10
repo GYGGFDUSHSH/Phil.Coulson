@@ -585,17 +585,17 @@ Sorry  bro ,{search} No Movie/Series Related to the Given Word Was Found 🥺
             BUTTONS[key] = search
             req = message.from_user.id if message.from_user else 0
             btn.append(
-                [InlineKeyboardButton(text=f"Pᴀɢᴇ 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝙉𝙀𝙓𝙏 ☞︎︎︎",callback_data=f"next_{req}_{key}_{offset}")]
+                [InlineKeyboardButton(text=f"🗓Pᴀɢᴇ 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="𝙉𝙀𝙓𝙏 ☞︎︎︎",callback_data=f"next_{req}_{key}_{offset}")]
             )
         else:
             btn.append(
-                [InlineKeyboardButton(text="Pᴀɢᴇ 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="🗓Pᴀɢᴇ 1/1",callback_data="pages")]
             )
         imdb = await get_poster(search) if IMDB else None
         if imdb and imdb.get('poster'):
             await message.reply_photo(photo=imdb.get('poster'), caption=f"📀 𝖳𝗂𝗍𝗅𝖾: <b>{imdb.get('title')}</b>\n\n⏱️ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾: <b>{imdb.get('runtime')}</b>\n🌟 𝖱𝖺𝗍𝗂𝗇𝗀: <b>{imdb.get('rating')} / 10\n🗳️</b> 𝖵𝗈𝗍𝖾𝗌: <b>{imdb.get('votes')}</b>\n\n📆 𝖱𝖾𝗅𝖾𝖺𝗌𝖾: <b>{imdb.get('year')}</b>\n🎭 𝖦𝖾𝗇𝗋𝖾: <b>{imdb.get('genres')}</b>\n🎙 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾: <b>{imdb.get('languages')}</b>\n🌐 𝖢𝗈𝗎𝗇𝗍𝗋𝗒: <b>{imdb.get('countries')}</b>\n✍️ 𝖣𝗂𝗋𝖾𝖼𝗍𝗈𝗋: <b>{imdb.get('director')}</b>\nCast : {imdb.get('cast')}\n🗣️ Requested BY {message.from_user.mention}", reply_markup=InlineKeyboardMarkup(btn))
         elif imdb:
-            await message.reply_photo(photo="https://telegra.ph/file/f9f1b7440984664f37462.jpg", caption=f"📀 𝖳𝗂𝗍𝗅𝖾: <b>{imdb.get('title')}</b>\n\n⏱️ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾: {imdb.get('runtimes')}\n🌟 𝖱𝖺𝗍𝗂𝗇𝗀: <code>{imdb.get('rating')} / 10\n🗳️ 𝖵𝗈𝗍𝖾𝗌: {imdb.get('votes')}\n\n📆 𝖱𝖾𝗅𝖾𝖺𝗌𝖾: <b>{imdb.get('year')}</b>\n🎭 𝖦𝖾𝗇𝗋𝖾: <b>{imdb.get('genres')}</b>\n🎙 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾: {imdb.get('languages')}\n🌐 𝖢𝗈𝗎𝗇𝗍𝗋𝗒: {imdb.get('countries')}\n✍️ 𝖣𝗂𝗋𝖾𝖼𝗍𝗈𝗋: {imdb.get('director')}\n🗣️ Requested BY {message.from_user.mention}", reply_markup=InlineKeyboardMarkup(btn))
+            await message.reply_photo(photo="https://telegra.ph/file/f9f1b7440984664f37462.jpg", caption=f"📀 𝖳𝗂𝗍𝗅𝖾: <b>{imdb.get('title')}</b>\n\n⏱️ 𝖱𝗎𝗇𝗍𝗂𝗆𝖾: {imdb.get('runtimes')}\n🌟 𝖱𝖺𝗍𝗂𝗇𝗀: <code>{imdb.get('rating')} / 10\n🗳️ 𝖵𝗈𝗍𝖾𝗌: {imdb.get('votes')}\n\n📆 𝖱𝖾𝗅𝖾𝖺𝗌𝖾: <b>{imdb.get('year')}</b>\n🎭 𝖦𝖾𝗇𝗋𝖾: <b>{imdb.get('genres')}</b>\n🎙 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾: {imdb.get('languages')}\n🌐 𝖢𝗈𝗎𝗇𝗍𝗋𝗒: {imdb.get('countries')}\n✍️ 𝖣𝗂𝗋𝖾𝖼𝗍𝗈𝗋: {imdb.get('director')}\n🗣️ Requested BY <b>{message.from_user.mention}</b>", reply_markup=InlineKeyboardMarkup(btn))
         else:
             await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‎ </b>", reply_markup=InlineKeyboardMarkup(btn))
         
