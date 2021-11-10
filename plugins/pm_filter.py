@@ -378,11 +378,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption=f_caption
         if f_caption is None:
             f_caption = f"{title}"
-        buttons = [
-                    [
-                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
-                    ]
-                    ]
+
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
