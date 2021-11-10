@@ -387,8 +387,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption
-            reply_markup=InlineKeyboardMarkup(filebuttons)
+            caption=f_caption, 
             )
 
     elif query.data == "pages":
