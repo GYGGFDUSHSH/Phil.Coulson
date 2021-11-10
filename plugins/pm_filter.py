@@ -20,6 +20,16 @@ from database.filters_mdb import(
 )
 
 BUTTONS = {}
+
+filebuttons = [
+                    [
+                        InlineKeyboardButton('🎬 Movies 🎬', url='t.me/PrimeFlixMovies'),
+                    ],
+                    [
+                        InlineKeyboardButton('💢 TV SERIES 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
+                    ]
+                    ]
+
 LONG_IMDB_DESCRIPTION = "True"
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
