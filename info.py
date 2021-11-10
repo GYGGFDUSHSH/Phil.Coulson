@@ -47,3 +47,4 @@ IMDB = "True"
 MAX_LIST_ELM = 4
 SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "True")))
 CUSTOM_FILE_CAPTION = "`{file_name}`"
+USE_CAPTION_FILTER = True
