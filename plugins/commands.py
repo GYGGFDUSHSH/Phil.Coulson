@@ -12,15 +12,6 @@ from utils import get_size, is_subscribed, temp
 
 logger = logging.getLogger(__name__)
 
-buttons = [
-                    [
-                        InlineKeyboardButton('⁉️ Support Group', url='t.me/sofia_support'),
-                    ],
-                    [
-                        InlineKeyboardButton('🔎 Search', switch_inline_query_current_chat='')
-                    ]
-                    ]
-
 @Client.on_message(filters.command("start"))
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
