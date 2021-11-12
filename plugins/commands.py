@@ -107,8 +107,8 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
+                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
     await client.send_cached_media(
