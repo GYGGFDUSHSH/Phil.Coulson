@@ -45,6 +45,6 @@ SUPPORT_CHAT = "PrimeFlix_Movies"
 P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
 MAX_LIST_ELM = 4
-SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "True")))
+SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "False")))
 CUSTOM_FILE_CAPTION = "`{file_name}` \n\n<b>🎬 Join For All Movies  @PrimeFlix_Movies 🎬</b>"
 
