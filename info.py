@@ -46,5 +46,5 @@ P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
 MAX_LIST_ELM = 4
 SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "True")))
-CUSTOM_FILE_CAPTION = "`{file_name}`" \n<b> Join For All Movies  @PrimeFlix_Movies</b>
+CUSTOM_FILE_CAPTION = "<b> Join For All Movies  @PrimeFlix_Movies</b>"
 
