@@ -337,8 +337,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
+                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
         try:
