@@ -31,7 +31,7 @@ PICS = [
 # Admins, Channels & Users
 ADMINS = [1103647866]
 CHANNELS = [-1001485668506]
-AUTH_USERS = ADMINS
+AUTH_USERS = 1103647866
 AUTH_CHANNEL = -1001485668506
 AUTH_GROUPS = -1001498025340
 # MongoDB information
@@ -46,5 +46,5 @@ P_TTTI_SHOW_OFF = "True"
 IMDB = "True"
 MAX_LIST_ELM = 4
 SINGLE_BUTTON = eval((environ.get('SINGLE_BUTTON', "True")))
-CUSTOM_FILE_CAPTION = "`{file_name}`"
+CUSTOM_FILE_CAPTION = "`{file_name}`" \n<b> Join For All Movies  @PrimeFlix_Movies</b>
 
