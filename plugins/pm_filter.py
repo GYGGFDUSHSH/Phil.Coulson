@@ -337,8 +337,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
                     [
-                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
-                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
+                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
+                    ],
+                    [
+                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
         try:
@@ -375,6 +377,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
                     [
                         InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
+                    ],
+                    [
+                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]    
         if CUSTOM_FILE_CAPTION:
@@ -387,8 +392,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122')
+                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
+                    ],
+                    [
+                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
         await query.answer()
