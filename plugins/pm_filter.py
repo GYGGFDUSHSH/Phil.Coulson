@@ -333,10 +333,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
                     [
-                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
-                    ],
-                    [
-                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/NewMoviesPF'),
+                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
         try:
@@ -372,10 +370,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         f_caption=files.caption
         buttons = [
                     [
-                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
-                    ],
-                    [
-                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/NewMoviesPF'),
+                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]    
         if CUSTOM_FILE_CAPTION:
@@ -388,10 +384,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons = [
                     [
-                        InlineKeyboardButton('🎬 𝗠𝗼𝘃𝗶𝗲𝘀 🎬', url='https://t.me/PrimeFlixMovies')
-                    ],
-                    [
-                        InlineKeyboardButton('💢 𝗧𝗩 𝗦𝗲𝗿𝗶𝗲𝘀 💢', url='t.me/TvseriesCollectionsPrimeflix')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/NewMoviesPF'),
+                        InlineKeyboardButton('💢 Series 💢', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
         await query.answer()
