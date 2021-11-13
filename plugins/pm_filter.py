@@ -419,10 +419,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('👥 Group 👥', url='t.me/PrimeFlix_Movies'),
             InlineKeyboardButton('🎈 Channel 🎈', url='https://t.me/NewMoviesPF')
             ],[
-            InlineKeyboardButton('❓ Help ❓', callback_data='help'),
-            InlineKeyboardButton('❕ About ❕', callback_data='about')
-            ],[
             InlineKeyboardButton('🕵 Developer 🕵', url='t.me/Wireless_TG')
+            ],[
+            InlineKeyboardButton('💡 Help', callback_data='help'),
+            InlineKeyboardButton('📡 About', callback_data='about') 
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
