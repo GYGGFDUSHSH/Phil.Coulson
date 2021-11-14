@@ -562,40 +562,47 @@ async def cb_handler(client: Client, query: CallbackQuery):
       )
     
 
-async def auto_filter(client, message):
-    if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
-        return
-    if 2 < len(message.text) < 100:    
-        btn = []
-        search = message.text
-        files, offset, total_results = await get_search_results(search.lower(), offset=0)
-        if files:
-            for file in files:
-                file_id = file.file_id
-                btn.append(
-                    [InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file_id}')]
-                    )
-        else:
-            m = await message.reply(
-              text=f"""
-<b>🥺 Dear {message.from_user.mention}
-Sorry  bro ,{search} No Movie/Series Related to the Given Word Was Found 🥺
-<i>Please Go to Google and Confirm the Correct Spelling 🥺🙏</i></b>""",
-          reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
-                    ],
-                    [       
-                        InlineKeyboardButton("🧐Did not understand🥲", callback_data="spelling"),
-                    ]
-                ]
-            )
-         )          
-            await asyncio.sleep(10)
-            await m.delete()
-        if not btn:
+async def auto_filter(client, msg, spoll=False):
+    if not spoll:
+        message = msg
+        if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
             return
+        if 2 < len(message.text) < 100:
+            search = message.text
+            files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
+            if not files:
+                if SPELL_CHECK_REPLY:
+                    return await advantage_spell_chok(msg)
+                else:
+                    return
+        else:
+            return
+    else:
+        message = msg.message.reply_to_message # msg will be callback query
+        search, files, offset, total_results = spoll
+    if SINGLE_BUTTON:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                ),
+            ]
+            for file in files
+        ]
+    else:
+        btn = [
+            [
+                InlineKeyboardButton(
+                    text=f"{file.file_name}",
+                    callback_data=f'files#{file.file_id}',
+                ),
+                InlineKeyboardButton(
+                    text=f"{get_size(file.file_size)}",
+                    callback_data=f'files_#{file.file_id}',
+                ),
+            ]
+            for file in files
+        ]
 
         if offset != "":
             key = f"{message.chat.id}-{message.message_id}"
